@@ -1,0 +1,71 @@
+.pizza {
+  padding: 24px 0;
+}
+.pizza__title {
+  margin-bottom: 24px;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1;
+}
+.pizza__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+.pizza__item {
+  display: flex;
+  flex-direction: column;
+}
+.pizza__card {
+  flex-grow: 1;
+}
+
+.pizza__reset-toppings {
+  display: block;
+  border: 1px solid transparent;
+  padding: 8px 24px;
+  border-radius: 32px;
+  background-color: var(--orange);
+  font-size: 14px;
+  color: var(--white);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.pizza__reset-toppings:hover {
+  background-color: #ff9b25;
+}
+
+.pizza__reset-toppings:focus-visible {
+  border-color: #b66200;
+  background-color: #ff9b25;
+  color: var(--white);
+}
+
+@media (min-width: 620px) {
+  .pizza {
+    padding: 64px 0;
+  }
+  .pizza__title {
+    font-size: 44px;
+  }
+  .pizza__list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .pizza__reset-toppings {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 860px) {
+  .pizza__reset-toppings {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1140px) {
+  .pizza__list {
+    gap: 20px;
+  }
+}

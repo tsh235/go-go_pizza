@@ -1,0 +1,35 @@
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background-color: rgba(44, 40, 38, 0.89);
+  cursor: pointer;
+  overflow-y: auto;
+  padding: 20px 14px;
+}
+
+.modal__main {
+  position: relative;
+  margin: auto;
+  background-color: var(--white);
+  border-radius: 32px;
+  cursor: default;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--beige);
+}
+
+.modal__close:hover {
+  color: var(--orange);
+}
+
+.modal__close:focus-visible {
+  color: var(--orange);
+  outline: 1px solid var(--orange);
+  border-radius: 4px;
+}

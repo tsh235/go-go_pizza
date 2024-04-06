@@ -1,0 +1,122 @@
+.toppings {
+  padding: 24px 0;
+}
+.toppings__title {
+  position: fixed;
+  transform: scale(0);
+}
+.toppings__btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.toppings__btn-arrow {
+  width: 20px;
+  height: 21px;
+  transition: transform 0.36s;
+}
+.toppings__btn_active .toppings__btn-arrow {
+  transform: scaleY(-1);
+}
+.toppings__list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .36s;
+}
+.toppings__list_show {
+  display: flex;
+}
+
+.toppings__checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.toppings__label {
+  display: block;
+  border: 1px solid transparent;
+  padding: 8px 24px;
+  border-radius: 32px;
+  background-color: var(--white);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--beige);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.toppings__label:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.toppings__checkbox:focus-visible + .toppings__label {
+  background-color: var(--white);
+  border-color: #b66200;
+  color: var(--orange);
+}
+.toppings__checkbox:checked + .toppings__label {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.toppings__checkbox:checked + .toppings__label:hover {
+  opacity: 0.8;
+}
+
+.toppings__reset {
+  display: block;
+  border: 1px solid transparent;
+  padding: 8px 24px;
+  border-radius: 32px;
+  background-color: var(--white);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--orange);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.toppings__reset:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.toppings__reset:focus-visible {
+  background-color: var(--white);
+  border-color: #b66200;
+  color: var(--orange);
+}
+
+@media (min-width: 620px) {
+  .toppings {
+    padding: 32px 0;
+  }
+  .toppings__btn {
+    font-size: 24px;
+  }
+  .toppings__label, .toppings__reset {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 860px) {
+  .toppings__title {
+    position: static;
+    transform: unset;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .toppings__btn {
+    display: none;
+  }
+  .toppings__label, .toppings__reset {
+    font-size: 20px;
+  }
+  .toppings__list {
+    display: flex;
+    max-height: none;
+  }
+}
